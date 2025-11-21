@@ -17,7 +17,23 @@ function setup(){
   fill(0);
   const dx = width / scores.length;
   let px, py; // 線を引くために一つ前の点を覚えておく変数
-  for(let i = 0; i < scores.length; i++){
+  // i< scores.length-1としているのはfor内で(i+1)を使うから
+  for(let i = 0; i < scores.length-1; i++){
     // BLANK[1]
+    // px,pyは一個前の点
+    px = i * dx +6;
+    py = height-(height*scores[i]/100);
+    // x,yは現在の点
+    x =  (i+1) * dx + 6;
+    y =  height-(height * scores[i+1]/100);
+
+    stroke(0);         // 点の色（黒）
+    strokeWeight(8);   // 点の大きさ
+    point(px,py);
+    point(x,y);
+
+    stroke(0); // 黒色の線
+    strokeWeight(2); //線の太さ
+    line(px,py,x,y);
   }
 }
