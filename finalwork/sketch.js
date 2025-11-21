@@ -45,7 +45,7 @@ function draw(){
     comment(20,"目標: 敵を50体倒せ!", width / 2, height / 2 + 60);
     return;
   }
-
+  // ルール説明画面
   if(gameState === "rule"){
     comment(48,"ルール説明", width / 2, height / 2 - 150);
     comment(20,"RIGHT_ARROW(→)：右移動", width / 2, height / 2 - 90);
